@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Travel Explorer</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Travel Explorer</h1>
+        <p>Discover Beautiful Places Around the World</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Travel Explorer is your companion in discovering the world’s most beautiful destinations. From mountain peaks
+            to serene beaches, we help you plan and explore trips that leave lasting memories. We believe travel is the
+            key to happiness and personal growth. Start your journey with us today!</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have a question or want to plan a custom trip? Fill out the form below, and we’ll reach out to you shortly.
+        </p>
+
+        <form id="queryForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter Your Email Address">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Enter 10-digit phone number" placeholder="Enter Mobile Number">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter Your Message"></textarea>
+
+            <div class="button-wrapper">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+    </footer>
+
+    <!-- toast added-->
+        <div id="toast" class="toast"></div>
+    <!-- toast added-->
+
+    <!-- <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! We will contact you shortly.');
+            event.target.reset();
+        }
+    </script> -->
+   
+   <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const fields = document.querySelectorAll('#queryForm input, #queryForm textarea');
+
+            fields.forEach(field => {
+                field.addEventListener('input', () => {
+                    // If the first character is a space, remove it
+                    if (field.value.length === 1 && field.value.startsWith(' ')) {
+                        field.value = '';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
