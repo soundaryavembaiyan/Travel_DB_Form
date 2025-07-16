@@ -3,10 +3,10 @@ header('Content-Type: application/json'); // Respond with JSON
 
 $conn = new mysqli('localhost', 'root', '', 'project');
 // $conn = new mysqli(
-//     "sql105.infinityfree.com",     // Hostname
-//     "if0_39478559",                // MySQL username
-//     "d1JrD3a5A4J",                 // MySQL password
-//     "if0_39478559_travel_db"       // Database name
+//     "sql100.infinityfree.com",     // Hostname
+//     "if0_39487430",                // MySQL username
+//     "djroomF3Euk8I",                 // MySQL password
+//     "if0_39487430_travel_db"       // Database name
 // );
 
 if ($conn->connect_error) {
