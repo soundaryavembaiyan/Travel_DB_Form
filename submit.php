@@ -2,6 +2,12 @@
 header('Content-Type: application/json'); // Respond with JSON
 
 $conn = new mysqli('localhost', 'root', '', 'project');
+// $conn = new mysqli(
+//     "sql105.infinityfree.com",     // Hostname
+//     "if0_39478559",                // MySQL username
+//     "d1JrD3a5A4J",                 // MySQL password
+//     "if0_39478559_travel_db"       // Database name
+// );
 
 if ($conn->connect_error) {
     http_response_code(500);
